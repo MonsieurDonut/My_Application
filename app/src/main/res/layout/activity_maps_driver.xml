@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsPassengerActivity">
+    <Button
+        android:id="@+id/btnAction2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25sp"
+        android:text="@string/FindARide" />
+    <fragment
+        android:id="@+id/map2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsPassengerActivity" />
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar2"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:mt_hint="@string/MapSearchBar"
+        app:mt_placeholder="@string/MapSearchBar"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_speechMode="false"
+        app:mt_navIconEnabled="false"
+        android:elevation="5dp"
+        android:outlineProvider="bounds" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pin"
+        android:layout_centerInParent="true"
+        android:translationY="-24dp"
+        android:contentDescription="@string/MapCursor" />
+    <LinearLayout
+        android:id="@+id/passengerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/btnAction2"
+        android:background="@color/white"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btnDismissPassenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/dismiss"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AssignedDriverInfo"
+            android:paddingBottom="10sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/passengerInfoImageView"
+            android:src="@mipmap/ic_default_user_round"
+            android:layout_margin="20sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity=""
+            android:layout_marginBottom="80dp"
+            android:paddingLeft="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10sp"
+                android:paddingTop="20sp"
+                android:id="@+id/passengerInfoUsername"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20sp"
+                android:id="@+id/passengerInfoName"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

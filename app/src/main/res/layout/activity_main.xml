@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00AF2A2A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200sp"
+        android:hint="@string/loginUsername"
+        app:errorTextAppearance="@style/custErrorMessage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="Username"
+            android:ems="10"
+            android:focusable="true"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:hint="@string/loginPassword"
+        app:endIconMode="password_toggle"
+        app:errorTextAppearance="@style/custErrorMessage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="Password"
+            android:ems="10"
+            android:focusable="true"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="16sp"
+        android:foregroundGravity="center_horizontal"
+        android:text="@string/loginLogin"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/loginForgotPassword"
+
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/loginNewUser"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateOnly="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvPleaseWait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/PleaseWait"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+</LinearLayout>
+</ScrollView>
